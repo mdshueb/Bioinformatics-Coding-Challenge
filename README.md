@@ -1,73 +1,125 @@
-The present Challenge comprises two challenges designed to evaluate candidates’ technical and analytical skills:
+NGS Data Analysis and Statistical Evaluation
+Overview
+This project consists of two challenges focused on Data Handling and Statistical Analysis and NGS Data Analysis. The goal is to evaluate and analyze complex data related to phased methylation patterns (PMPs) and raw sequencing data from normal and cancer tissue samples. The tasks involve performing statistical analysis, alignment, mutation calling, and handling genomic data.
 
-1. Data Analysis and Statistics: Assessing the ability to analyze and interpret complex data, particularly phased methylation patterns.
-   
-2. NGS Alignment and Mutation Calling: Evaluating proficiency in processing raw sequencing data, aligning reads to a reference genome, and identifying somatic mutations.
-
-______________________________________________________________________________
-
+Objectives
 Challenge 1: Data Handling and Statistical Analysis
-
-Objective: Assess candidates’ ability to handle complex data and apply statistical methods effectively.
-
-Background: CpG methylation is an epigenetic marker that varies across tissue types. However, the methylation status of a single CpG site is unreliable as a biomarker due to errors introduced by bisulfite sequencing, sampling techniques, and biological variability.
-
-Definition: Phased Methylation Pattern (PMP) is a unique set of coordinates that includes the DNA strand (‘f’ for forward (+) or ‘r’ for reverse (-)), the relative positions of three CpG sites on the same strand (e.g., x:y:z), and their methylation status (e.g., ‘000’ for all unmethylated or ‘111’ for all methylated). It represents a combined epigenetic signature across these CpG sites.
-
-Hypothesis: Phased methylation patterns (PMPs) can act as reliable biomarkers to differentiate tissue types, providing higher specificity compared to individual CpG sites.
-
-Dataset: The dataset (Link to Data) summarizes phased methylation patterns from NGS results across two tissues. Key columns include:
-
-    • Strand: Indicates the DNA strand (‘f’ or ‘r’).
-    • CpG Coordinates: Relative positions of three CpG sites (x:y:z).
-    • Methylation Status: Eight possible patterns (‘000’ to ‘111’).
-    • Sample ID: Unique identifier for each sample.
-    • Replicate: Indicates technical replicates.
-    • Tissue: Tissue type (Tissue #1 or Tissue #2).
-
-Sub-tasks:
-
-1. Coverage Analysis:
-
-    a. Calculate the median and coefficient of variation (CV) for single CpG coverage in each tissue.
-
-    b. Generate plots summarizing the coverage statistics.
-
-2. Biomarker Identification:
-   
-    a. Identify PMPs with high specificity for tissue differentiation, minimizing false positives for Tissue #1 while allowing some false negatives. Use statistical or machine learning        approaches to assign confidence (e.g., p-values) to each PMP.
-
-    b. Calculate the mean variant read fraction (VRF) for each PMP in both tissues.
-
-3. Address the following questions:
- 
-    a. How does sequencing depth affect specificity confidence?
-   
-    b. For the top 10 PMPs, estimate the threshold of reads required to confidently call Tissue #2 at a sequencing depth of 1 million reads.
-   
-    c. Validate the hypothesis by comparing the specificity of the top 10 PMPs against individual CpG sites.
-
-___________________________________________________________________________
-
+Coverage Analysis: Calculate statistics like the median and coefficient of variation (CV) for single CpG coverage and generate plots to summarize coverage data.
+Biomarker Identification: Identify PMPs that show high specificity for differentiating tissues and calculate the mean variant read fraction (VRF) for each PMP.
+Addressing Specific Questions: Analyze the effect of sequencing depth on specificity, estimate the required read threshold for confident tissue classification, and compare the specificity of top 10 PMPs with individual CpG sites.
 Challenge 2: NGS Data Analysis
+Quality Control: Perform quality control on FASTQ files using FastQC, summarize quality metrics.
+Alignment and Mutation Calling: Align sequencing data to the human genome, perform somatic mutation detection, and identify mutations unique to cancer tissue.
+Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R to perform mutation detection and calculate necessary metrics.
+Installation Requirements
+You will need the following software and libraries installed to run the analysis:
 
-Objective: Evaluate candidates’ ability to process and analyze raw sequencing data.
+Linux-based tools:
 
-Dataset: The dataset (Link to Data) consists of NGS samples in FASTQ format, including one sample from normal tissue and one from cancer tissue.
+fastqc
+bowtie2
+bwa
+samtools
+bcftools
+gatk (Genome Analysis Toolkit)
+Python Libraries:
 
-Sub-tasks:
+pandas
+numpy
+matplotlib
+seaborn
+pysam
+scikit-learn
+To install dependencies, run:
 
-1. Quality Control:
-     
-      a. Perform quality checks using tools like FastQC and summarize quality metrics (e.g., sequence counts, per-base quality, read duplication levels).
+bash
+Copy
+Edit
+# Install required Linux tools
+apt-get update
+apt-get install -y fastqc bowtie2 bwa samtools bcftools
 
-2. Alignment and Mutation Calling:
+# Install Python libraries
+pip install matplotlib seaborn pysam pandas scikit-learn
+Dataset
+The dataset consists of the following files:
 
-      a. Align the samples to the human genome using tools like Bowtie2 or BWA.
-   
-      b. Identify somatic mutations present in the cancer sample but absent in the normal tissue.
-   
-        i. Benchmark Software: Use established tools such as Mutect2, Strelka2, or VarScan2 for somatic mutation identification and background mutation estimation.
-       ii. Custom Code Development: Write your own scripts, leveraging tools like Samtools, bcftools, or Python/R libraries, to perform mutation detection and calculate the required metrics.
-   
-      c. Use the normal tissue to calculate the median background mutation level. The background mutation level accounts for sequencing errors or biases that can mimic true mutations.           Determine how many reads per million are required to confidently call a given mutation.
+CpG Methylation Data: PupilBioTest_PMP_revA.csv – Contains methylation patterns across tissues.
+NGS Data:
+FASTQ files for tumor and normal tissue samples in .fastq.gz format.
+The files are expected to be provided via a secure link or uploaded to your environment.
+Running the Analysis
+1. Data Handling and Statistical Analysis
+Step 1: Coverage Analysis
+This step calculates the median and coefficient of variation (CV) for single CpG coverage in each tissue. It also generates plots summarizing coverage statistics.
+
+bash
+Copy
+Edit
+python scripts/data_handling_analysis.py
+Step 2: Biomarker Identification
+This part of the analysis uses statistical or machine learning approaches to identify PMPs that are highly specific for tissue differentiation. It also calculates the mean variant read fraction (VRF).
+
+bash
+Copy
+Edit
+python scripts/biomarker_identification.py
+2. NGS Data Analysis
+Step 1: Quality Control
+Quality control on the raw sequencing data is performed using FastQC, and a summary of quality metrics is generated.
+
+bash
+Copy
+Edit
+python scripts/ngs_quality_control.py
+Step 2: Alignment and Mutation Calling
+Align the NGS data to the human genome and perform mutation calling using BWA, Mutect2, or a custom Python script.
+
+bash
+Copy
+Edit
+python scripts/ngs_mutation_detection.py
+Step 3: Calculate Background Mutation Level
+Using the normal tissue data, calculate the median background mutation level and determine the required reads per million for confident mutation calling.
+
+bash
+Copy
+Edit
+python scripts/mutation_background_analysis.py
+File Structure
+The project directory is structured as follows:
+
+graphql
+Copy
+Edit
+NGS_Data_Analysis_Task/
+├── scripts/
+│   ├── data_handling_analysis.py        # Code for coverage analysis and statistics
+│   ├── biomarker_identification.py      # Code for PMP identification and VRF calculation
+│   ├── ngs_quality_control.py           # Code for FastQC analysis
+│   ├── ngs_mutation_detection.py       # Code for mutation calling and analysis
+│   ├── mutation_background_analysis.py  # Code for background mutation calculation
+├── data/
+│   ├── PupilBioTest_PMP_revA.csv       # Phased methylation patterns dataset
+│   └── (NGS FASTQ files)               # Raw sequencing files
+├── results/
+│   ├── plots/                          # Generated plots (e.g., boxplots, bar charts)
+│   └── reports/                        # Generated reports (e.g., summary of analysis)
+├── README.md                           # Project description and setup instructions
+└── (Optional large files)
+Notes for Reproducibility
+Data Preprocessing: Ensure that all raw data (FASTQ files) and metadata (CSV files) are properly uploaded and linked in the code.
+Dependencies: If any tool or library is not found in your system, please install them as specified above.
+Parameter Files: Make sure to update file paths in the code with the correct file locations.
+Results
+Upon running the scripts, the following results will be generated:
+
+Coverage Analysis: Box plots summarizing the distribution of CpG coverage across tissues.
+Biomarker Identification: A list of PMPs with their specificity and confidence metrics.
+Mutation Analysis: Mutation distribution across chromosomes and background mutation levels.
+Reports: Summary reports (in the results/reports/ folder) that detail the findings from the analysis.
+Contact Information
+For any questions or issues regarding the project, feel free to contact:
+
+Your Name
+Email: your.email@example.com

@@ -121,5 +121,5 @@ Reports: Summary reports (in the results/reports/ folder) that detail the findin
 Contact Information
 For any questions or issues regarding the project, feel free to contact:
 
-Your Name
-Email: your.email@example.com
+Mohammad Shueb
+Email: mohammedshueb20525@gmail.com

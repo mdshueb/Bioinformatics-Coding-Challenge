@@ -1,11 +1,8 @@
 NGS Data Analysis and Statistical Evaluation
-
 Overview
-
 This project consists of two challenges focused on Data Handling and Statistical Analysis and NGS Data Analysis. The goal is to evaluate and analyze complex data related to phased methylation patterns (PMPs) and raw sequencing data from normal and cancer tissue samples. The tasks involve performing statistical analysis, alignment, mutation calling, and handling genomic data.
 
 Objectives
-
 Challenge 1: Data Handling and Statistical Analysis
 Coverage Analysis: Calculate statistics like the median and coefficient of variation (CV) for single CpG coverage and generate plots to summarize coverage data.
 Biomarker Identification: Identify PMPs that show high specificity for differentiating tissues and calculate the mean variant read fraction (VRF) for each PMP.

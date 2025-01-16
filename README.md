@@ -23,7 +23,6 @@ Alignment and Mutation Calling: Align sequencing data to the human genome, perfo
 Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R to perform mutation detection and calculate necessary metrics.
 
 # Install required Linux tools
-  ~ apt-get update
   ~ apt-get install -y fastqc bowtie2 bwa samtools bcftools
 
 # Install Python libraries

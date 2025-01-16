@@ -65,7 +65,7 @@ Upon running the scripts, the following results will be generated:
   - Coverage Analysis: Box plots summarizing the distribution of CpG coverage across tissues.
   - Biomarker Identification: A list of PMPs with their specificity and confidence metrics.
   - Mutation Analysis: Mutation distribution across chromosomes and background mutation levels.
-  - Reports: Summary reports (in the results/reports/ folder) that detail the findings from the analysis.
+  - Reports: Summary reports that detail the findings from the analysis.
     
 # Contact Information
 For any questions or issues regarding the project, feel free to contact:

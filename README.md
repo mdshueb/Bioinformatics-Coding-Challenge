@@ -1,12 +1,12 @@
-NGS Data Analysis and Statistical Evaluation
+# NGS Data Analysis and Statistical Evaluation
 
-Overview
+# Overview
 
 This project consists of two challenges focused on Data Handling and Statistical Analysis and NGS Data Analysis. The goal is to evaluate and analyze complex data related to phased methylation patterns (PMPs) and raw sequencing data from normal and cancer tissue samples. The tasks involve performing statistical analysis, alignment, mutation calling, and handling genomic data.
 
-Objectives
+# Objectives
 
-Challenge 1: Data Handling and Statistical Analysis
+# Challenge 1: Data Handling and Statistical Analysis
 
 Coverage Analysis: Calculate statistics like the median and coefficient of variation (CV) for single CpG coverage and generate plots to summarize coverage data.
 
@@ -14,7 +14,7 @@ Biomarker Identification: Identify PMPs that show high specificity for different
 
 Addressing Specific Questions: Analyze the effect of sequencing depth on specificity, estimate the required read threshold for confident tissue classification, and compare the specificity of top 10 PMPs with individual CpG sites.
 
-Challenge 2: NGS Data Analysis
+# Challenge 2: NGS Data Analysis
 
 Quality Control: Perform quality control on FASTQ files using FastQC, summarize quality metrics.
 
@@ -22,11 +22,11 @@ Alignment and Mutation Calling: Align sequencing data to the human genome, perfo
 
 Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R to perform mutation detection and calculate necessary metrics.
 
-Installation Requirements
+# Installation Requirements
 
 You will need the following software and libraries installed to run the analysis:
 
-Linux-based tools:
+# Linux-based tools:
   - fastqc
   - bowtie2
   - bwa
@@ -34,7 +34,7 @@ Linux-based tools:
   - bcftools
   - gatk (Genome Analysis Toolkit)
 
-Python Libraries:
+# Python Libraries:
   - pandas
   - numpy
   - matplotlib
@@ -48,13 +48,13 @@ Python Libraries:
 # Install Python libraries
   - pip install matplotlib seaborn pysam pandas scikit-learn
 
-Dataset
+# Dataset
 
 The dataset consists of the following files: CpG Methylation Data: PupilBioTest_PMP_revA.csv – Contains methylation patterns across tissues.
 NGS Data: FASTQ files for tumor and normal tissue samples in .fastq.gz format.
 The files are expected to be provided via a secure link or uploaded to your environment.
 
-Running the Analysis
+# Running the Analysis
 
 1. Data Handling and Statistical Analysis
 
@@ -80,7 +80,9 @@ Step 3: Calculate Background Mutation Level
 
 Using the normal tissue data, calculate the median background mutation level and determine the required reads per million for confident mutation calling.
 
-File Structure - The project directory is structured as follows:
+# File Structure 
+
+The project directory is structured as follows:
 
 NGS_Data_Analysis_Task/
 ├── scripts/
@@ -98,7 +100,7 @@ NGS_Data_Analysis_Task/
 ├── README.md                           # Project description and setup instructions
 └── (Optional large files)
 
-Notes for Reproducibility
+# Notes for Reproducibility
 
 Data Preprocessing: Ensure that all raw data (FASTQ files) and metadata (CSV files) are properly uploaded and linked in the code.
 
@@ -106,7 +108,7 @@ Dependencies: If any tool or library is not found in your system, please install
 
 Parameter Files: Make sure to update file paths in the code with the correct file locations.
 
-Results
+# Results
 
 Upon running the scripts, the following results will be generated:
 
@@ -115,9 +117,9 @@ Upon running the scripts, the following results will be generated:
   - Mutation Analysis: Mutation distribution across chromosomes and background mutation levels.
   - Reports: Summary reports (in the results/reports/ folder) that detail the findings from the analysis.
     
-Contact Information
+# Contact Information
 
 For any questions or issues regarding the project, feel free to contact:
 
-Mohammad Shueb
-Email: mohammedshueb20525@gmail.com
+# Mohammad Shueb
+# Email: mohammedshueb20525@gmail.com

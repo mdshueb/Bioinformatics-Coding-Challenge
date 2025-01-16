@@ -24,23 +24,30 @@ Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R t
   ~ pip install matplotlib pysam pandas scikit-learn
 
 # Dataset
-The dataset consists of the following files: CpG Methylation Data: PupilBioTest_PMP_revA.csv – Contains methylation patterns across tissues.
-NGS Data: FASTQ files for tumor and normal tissue samples in .fastq.gz format.
-The files are expected to be provided via a secure link or uploaded to your environment.
+  - The dataset consists of the following files: CpG Methylation Data: PupilBioTest_PMP_revA.csv – Contains methylation patterns across tissues.
+   
+  - NGS Data: FASTQ files for tumor and normal tissue samples in .fastq.gz format.
+  
+  - The files are expected to be provided via a secure link or uploaded to your environment.
 
 # Running the Analysis
 1. Data Handling and Statistical Analysis
+
   Step 1: Coverage Analysis - This step calculates the median and coefficient of variation (CV) for single CpG coverage in each tissue. It also generates plots summarizing coverage statistics.
+  
   Step 2: Biomarker Identification - This part of the analysis uses statistical or machine learning approaches to identify PMPs that are highly specific for tissue differentiation. It also calculates the mean variant read fraction (VRF).
 
-2. NGS Data Analysis
+3. NGS Data Analysis
   Step 1: Quality control on the raw sequencing data is performed using FastQC, and a summary of quality metrics is generated.
+
   Step 2: Align the NGS data to the human genome and perform mutation calling using BWA, Mutect2, or a custom Python script.
+  
   Step 3: Using the normal tissue data, calculate the median background mutation level and determine the required reads per million for confident mutation calling.
 
 # File Structure 
 The project directory is structured as follows:
 #NGS_Data_Analysis_Task/
+
 ├── scripts/
 │   ├── data_handling_analysis.py        # Code for coverage analysis and statistics
 │   ├── biomarker_identification.py      # Code for PMP identification and VRF calculation
@@ -57,11 +64,9 @@ The project directory is structured as follows:
 └── (Optional large files)
 
 # Notes for Reproducibility
-Data Preprocessing: Ensure that all raw data (FASTQ files) and metadata (CSV files) are properly uploaded and linked in the code.
-
-Dependencies: If any tool or library is not found in your system, please install them as specified above.
-
-Parameter Files: Make sure to update file paths in the code with the correct file locations.
+  - Data Preprocessing: Ensure that all raw data (FASTQ files) and metadata (CSV files) are properly uploaded and linked in the code.
+  - Dependencies: If any tool or library is not found in your system, please install them as specified above.
+  - Parameter Files: Make sure to update file paths in the code with the correct file locations.
 
 # Results
 Upon running the scripts, the following results will be generated:

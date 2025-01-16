@@ -14,9 +14,9 @@ This project consists of two challenges focused on Data Handling and Statistical
   - Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R to perform mutation detection and calculate necessary metrics.
 
 # Downloading & Installations
-a.  hg38.fa
-b.  openjdk-17-jdk (Java Supported)
-c.  Linux-based Tools:
+- hg38.fa
+- openjdk-17-jdk (Java Supported)
+- Linux-based Tools:
     - fastqc
     - bowtie2
     - bwa
@@ -25,7 +25,7 @@ c.  Linux-based Tools:
     - gatk (Genome Analysis Toolkit)
     - picard.jar
 
-d.  Python Libraries:
+- Python Libraries:
     - pandas
     - numpy
     - matplotlib

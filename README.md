@@ -4,18 +4,14 @@
 This project consists of two challenges focused on Data Handling and Statistical Analysis and NGS Data Analysis. The goal is to evaluate and analyze complex data related to phased methylation patterns (PMPs) and raw sequencing data from normal and cancer tissue samples. The tasks involve performing statistical analysis, alignment, mutation calling, and handling genomic data.
 
 # Challenge 1: Data Handling and Statistical Analysis
-Coverage Analysis: Calculate statistics like the median and coefficient of variation (CV) for single CpG coverage and generate plots to summarize coverage data.
-
-Biomarker Identification: Identify PMPs that show high specificity for differentiating tissues and calculate the mean variant read fraction (VRF) for each PMP.
-
-Addressing Specific Questions: Analyze the effect of sequencing depth on specificity, estimate the required read threshold for confident tissue classification, and compare the specificity of top 10 PMPs with individual CpG sites.
+  - Coverage Analysis: Calculate statistics like the median and coefficient of variation (CV) for single CpG coverage and generate plots to summarize coverage data.
+  - Biomarker Identification: Identify PMPs that show high specificity for differentiating tissues and calculate the mean variant read fraction (VRF) for each PMP.
+  - Addressing Specific Questions: Analyze the effect of sequencing depth on specificity, estimate the required read threshold for confident tissue classification, and compare the specificity of top 10 PMPs with individual CpG sites.
 
 # Challenge 2: NGS Data Analysis
-Quality Control: Perform quality control on FASTQ files using FastQC, summarize quality metrics.
-
-Alignment and Mutation Calling: Align sequencing data to the human genome, perform somatic mutation detection, and identify mutations unique to cancer tissue.
-
-Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R to perform mutation detection and calculate necessary metrics.
+  - Quality Control: Perform quality control on FASTQ files using FastQC, summarize quality metrics.
+  - Alignment and Mutation Calling: Align sequencing data to the human genome, perform somatic mutation detection, and identify mutations unique to cancer tissue.
+  - Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R to perform mutation detection and calculate necessary metrics.
 
 # Install required Linux tools
   ~ apt-get install -y fastqc bowtie2 bwa samtools bcftools
@@ -72,5 +68,6 @@ Upon running the scripts, the following results will be generated:
 # Contact Information
 For any questions or issues regarding the project, feel free to contact:
 
-Mohammad Shueb
+# Mohammad Shueb
+
 Email: mohammedshueb20525@gmail.com

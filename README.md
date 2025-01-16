@@ -22,31 +22,12 @@ Alignment and Mutation Calling: Align sequencing data to the human genome, perfo
 
 Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R to perform mutation detection and calculate necessary metrics.
 
-# Installation Requirements
-
-You will need the following software and libraries installed to run the analysis:
-
-# Linux-based tools:
-  - fastqc
-  - bowtie2
-  - bwa
-  - samtools
-  - bcftools
-  - gatk (Genome Analysis Toolkit)
-
-# Python Libraries:
-  - pandas
-  - numpy
-  - matplotlib
-  - pysam
-  - scikit-learn
-
 # Install required Linux tools
-  - apt-get update
-  - apt-get install -y fastqc bowtie2 bwa samtools bcftools
+  ~ apt-get update
+  ~ apt-get install -y fastqc bowtie2 bwa samtools bcftools
 
 # Install Python libraries
-  - pip install matplotlib seaborn pysam pandas scikit-learn
+  ~ pip install matplotlib pysam pandas scikit-learn
 
 # Dataset
 
@@ -58,33 +39,27 @@ The files are expected to be provided via a secure link or uploaded to your envi
 
 1. Data Handling and Statistical Analysis
 
-Step 1: Coverage Analysis
+  Step 1: Coverage Analysis
 
-This step calculates the median and coefficient of variation (CV) for single CpG coverage in each tissue. It also generates plots summarizing coverage statistics.
+  This step calculates the median and coefficient of variation (CV) for single CpG coverage in each tissue. It also generates plots summarizing coverage statistics.
    
-Step 2: Biomarker Identification
+  Step 2: Biomarker Identification
 
-This part of the analysis uses statistical or machine learning approaches to identify PMPs that are highly specific for tissue differentiation. It also calculates the mean variant read fraction (VRF).
+  This part of the analysis uses statistical or machine learning approaches to identify PMPs that are highly specific for tissue differentiation. It also calculates the mean variant read fraction (VRF).
 
 2. NGS Data Analysis
 
-Step 1: Quality Control
+  Step 1: Quality control on the raw sequencing data is performed using FastQC, and a summary of quality metrics is generated.
 
-Quality control on the raw sequencing data is performed using FastQC, and a summary of quality metrics is generated.
-
-Step 2: Alignment and Mutation Calling
-
-Align the NGS data to the human genome and perform mutation calling using BWA, Mutect2, or a custom Python script.
-
-Step 3: Calculate Background Mutation Level
-
-Using the normal tissue data, calculate the median background mutation level and determine the required reads per million for confident mutation calling.
+  Step 2: Align the NGS data to the human genome and perform mutation calling using BWA, Mutect2, or a custom Python script.
+  
+  Step 3: Using the normal tissue data, calculate the median background mutation level and determine the required reads per million for confident mutation calling.
 
 # File Structure 
 
 The project directory is structured as follows:
 
-NGS_Data_Analysis_Task/
+#NGS_Data_Analysis_Task/
 ├── scripts/
 │   ├── data_handling_analysis.py        # Code for coverage analysis and statistics
 │   ├── biomarker_identification.py      # Code for PMP identification and VRF calculation
@@ -102,24 +77,27 @@ NGS_Data_Analysis_Task/
 
 # Notes for Reproducibility
 
-Data Preprocessing: Ensure that all raw data (FASTQ files) and metadata (CSV files) are properly uploaded and linked in the code.
+  Data Preprocessing: Ensure that all raw data (FASTQ files) and metadata (CSV files) are properly uploaded and linked in the code.
 
-Dependencies: If any tool or library is not found in your system, please install them as specified above.
+  Dependencies: If any tool or library is not found in your system, please install them as specified above.
 
-Parameter Files: Make sure to update file paths in the code with the correct file locations.
+  Parameter Files: Make sure to update file paths in the code with the correct file locations.
 
 # Results
 
 Upon running the scripts, the following results will be generated:
 
   - Coverage Analysis: Box plots summarizing the distribution of CpG coverage across tissues.
+  
   - Biomarker Identification: A list of PMPs with their specificity and confidence metrics.
+  
   - Mutation Analysis: Mutation distribution across chromosomes and background mutation levels.
+  
   - Reports: Summary reports (in the results/reports/ folder) that detail the findings from the analysis.
     
 # Contact Information
 
 For any questions or issues regarding the project, feel free to contact:
 
-# Mohammad Shueb
-# Email: mohammedshueb20525@gmail.com
+Mohammad Shueb
+Email: mohammedshueb20525@gmail.com

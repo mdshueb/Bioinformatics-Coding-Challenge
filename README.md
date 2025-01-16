@@ -13,11 +13,25 @@ This project consists of two challenges focused on Data Handling and Statistical
   - Alignment and Mutation Calling: Align sequencing data to the human genome, perform somatic mutation detection, and identify mutations unique to cancer tissue.
   - Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R to perform mutation detection and calculate necessary metrics.
 
-# Install required Linux tools
-  ~ apt-get install -y fastqc bowtie2 bwa samtools bcftools
-
-# Install Python libraries
-  ~ pip install matplotlib pysam pandas scikit-learn
+# Downloading & Installations
+  - hg38.fa
+  - openjdk-17-jdk (Java Supported)
+  - Linux-based Tools:
+      - fastqc
+      - bowtie2
+      - bwa
+      - samtools
+      - bcftools
+      - gatk (Genome Analysis Toolkit)
+      - picard.jar
+        
+  - Python Libraries:
+      - pandas
+      - numpy
+      - matplotlib
+      - pysam
+      - scikit-learn
+      - Statsmodels
 
 # Dataset
   - The dataset consists of the following files: CpG Methylation Data: PupilBioTest_PMP_revA.csv – Contains methylation patterns across tissues.

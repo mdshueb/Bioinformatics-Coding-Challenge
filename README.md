@@ -37,20 +37,34 @@ This project consists of two challenges focused on Data Handling and Statistical
 # File Structure 
 The project directory is structured as follows:
 
-#NGS_Data_Analysis_Task/
+NGS_Data_Analysis_Task/
+
 ├── scripts/
+
 │   ├── data_handling_analysis.py        # Code for coverage analysis and statistics
+
 │   ├── biomarker_identification.py      # Code for PMP identification and VRF calculation
+
 │   ├── ngs_quality_control.py           # Code for FastQC analysis
+
 │   ├── ngs_mutation_detection.py       # Code for mutation calling and analysis
+
 │   ├── mutation_background_analysis.py  # Code for background mutation calculation
+
 ├── data/
+
 │   ├── PupilBioTest_PMP_revA.csv       # Phased methylation patterns dataset
+
 │   └── (NGS FASTQ files)               # Raw sequencing files
+
 ├── results/
+
 │   ├── plots/                          # Generated plots (e.g., boxplots, bar charts)
+
 │   └── reports/                        # Generated reports (e.g., summary of analysis)
+
 ├── README.md                           # Project description and setup instructions
+
 └── (Optional large files)
 
 # Notes for Reproducibility

@@ -14,24 +14,24 @@ This project consists of two challenges focused on Data Handling and Statistical
   - Custom Code Development: Develop scripts using Samtools, bcftools, or Python/R to perform mutation detection and calculate necessary metrics.
 
 # Downloading & Installations
-- hg38.fa
-- openjdk-17-jdk (Java Supported)
-- Linux-based Tools:
-  - fastqc
-  - bowtie2
-  - bwa
-  - samtools
-  - bcftools
-  - gatk (Genome Analysis Toolkit)
-  - picard.jar
+a.  hg38.fa
+b.  openjdk-17-jdk (Java Supported)
+c.  Linux-based Tools:
+    - fastqc
+    - bowtie2
+    - bwa
+    - samtools
+    - bcftools
+    - gatk (Genome Analysis Toolkit)
+    - picard.jar
 
-- Python Libraries:
-  - pandas
-  - numpy
-  - matplotlib
-  - pysam
-  - scikit-learn
-  - Statsmodels
+d.  Python Libraries:
+    - pandas
+    - numpy
+    - matplotlib
+    - pysam
+    - scikit-learn
+    - Statsmodels
 
 # Dataset
   - The dataset consists of the following files: CpG Methylation Data: PupilBioTest_PMP_revA.csv – Contains methylation patterns across tissues.

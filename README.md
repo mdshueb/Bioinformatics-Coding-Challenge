@@ -37,35 +37,23 @@ This project consists of two challenges focused on Data Handling and Statistical
 # File Structure 
 The project directory is structured as follows:
 
-NGS_Data_Analysis_Task/
+-  NGS_Data_Analysis_Task/
+  -  scripts
+  - data_handling_analysis.py (Code for coverage analysis and statistics)
+  - biomarker_identification.py (Code for PMP identification and VRF calculation)
+  - ngs_quality_control.py (Code for FastQC analysis)
+  - ngs_mutation_detection.py (Code for mutation calling and analysis)
+  - mutation_background_analysis.py (Code for background mutation calculation)
+    
+- Data/
+  - PupilBioTest_PMP_revA.csv (Phased methylation patterns dataset)
+  - NGS FASTQ files (Raw sequencing files)
 
-├── scripts/
+- Results/
+  - Generated plots (e.g., boxplots, bar charts)
+  - Generated reports (e.g., summary of analysis)
 
-│   ├── data_handling_analysis.py        # Code for coverage analysis and statistics
-
-│   ├── biomarker_identification.py      # Code for PMP identification and VRF calculation
-
-│   ├── ngs_quality_control.py           # Code for FastQC analysis
-
-│   ├── ngs_mutation_detection.py       # Code for mutation calling and analysis
-
-│   ├── mutation_background_analysis.py  # Code for background mutation calculation
-
-├── data/
-
-│   ├── PupilBioTest_PMP_revA.csv       # Phased methylation patterns dataset
-
-│   └── (NGS FASTQ files)               # Raw sequencing files
-
-├── results/
-
-│   ├── plots/                          # Generated plots (e.g., boxplots, bar charts)
-
-│   └── reports/                        # Generated reports (e.g., summary of analysis)
-
-├── README.md                           # Project description and setup instructions
-
-└── (Optional large files)
+- README.md (Project description and setup instructions)
 
 # Notes for Reproducibility
   - Data Preprocessing: Ensure that all raw data (FASTQ files) and metadata (CSV files) are properly uploaded and linked in the code.
